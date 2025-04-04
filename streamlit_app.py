@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("📘 베스트 📘책📘책📘책📘쳇봇 ")
+st.title("📘책📘책📘책📘쳇봇 ")
 st.write(
     "📘책스케줄📘책비교📘책리뷰📘쳇봇입니다! 요즘 인기 있는 책이 궁금하신가요? 어떤 책을 읽어볼지 고민된다면, 저에게 물어보세요!"
 )
@@ -45,7 +45,6 @@ else:
     if prompt := st.chat_input("궁금한 책이나 장르를 입력해보세요! 예: 요즘 베스트셀러는 뭐야?"):
 
         # Store and display the current prompt.
-        context_prompt = f"📘 책 제목: {book_title}\n📄 책 내용: {book_summary}\n\n🗨️ 질문: {prompt}"
         st.session_state.messages.append({"role": "user", "content": "너는 친절하고 똑똑한 책 튜터야. 사용자가 읽는 책 내용을 이해하도록 도와주는 역할을 해."})
         
         with st.chat_message("user"):
