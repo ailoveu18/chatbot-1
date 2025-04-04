@@ -36,7 +36,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input(""궁금한 점이나 토론하고 싶은 내용을 입력해보세요!"):
+    if prompt := st.chat_input("궁금한 점이나 토론하고 싶은 내용을 입력해보세요!"):
 
         # Store and display the current prompt.
         context_prompt = f"📘 책 제목: {book_title}\n📄 책 내용: {book_summary}\n\n🗨️ 질문: {prompt}"
