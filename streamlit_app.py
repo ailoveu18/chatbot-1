@@ -29,6 +29,23 @@ else:
             }
         ]
 
+    # 🎯 사용자 성향 테스트 시작
+    with st.form("preference_form"):
+        st.subheader("📘 책 추천 테스트 시작합니다!")
+        mood = st.radio("1. 요즘 기분은?", ["😄 행복", "😥 우울", "😐 지루"])
+        vibe = st.radio("2. 선호하는 분위기는?", ["📖 감동", "😂 유쾌", "🧠 지적인"])
+        length = st.radio("3. 읽기 좋은 분량은?", ["짧게", "중간", "길게"])
+        submitted = st.form_submit_button("📚 나에게 맞는 책 추천받기")
+
+    if submitted:
+        user_profile = f"""
+        📌 사용자 성향 테스트 결과:
+        - 현재 기분: {mood}
+        - 선호 분위기: {vibe}
+        - 읽고 싶은 분량: {length}
+        
+        위의 성향에 가장 잘 맞는 책을 1~2권 추천해줘. 책 제목, 줄거리, 이유를 함께 설명해줘.
+        
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
