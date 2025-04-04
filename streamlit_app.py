@@ -44,7 +44,7 @@ else:
         - 선호 분위기: {vibe}
         - 읽고 싶은 분량: {length}
         
-        위의 성향에 가장 잘 맞는 책을 1~2권 추천해줘. 책 제목, 줄거리, 이유를 함께 설명해줘.
+        위의 성향에 가장 잘 맞는 책을 1~2권 추천해줘. 책 제목, 줄거리, 이유를 함께 설명해줘."""
         
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
