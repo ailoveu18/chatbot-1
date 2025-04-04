@@ -13,10 +13,6 @@ if not openai_api_key:
 else:
     client = OpenAI(api_key=openai_api_key)
 
-      # 책 제목 및 요약 입력
-    with st.expander("📖 책 정보 입력하기"):
-        book_title = st.text_input("책 제목", placeholder="예: 데미안")
-        book_summary = st.text_area("책 요약 또는 읽은 내용", placeholder="책 내용 요약이나 현재까지 읽은 부분을 적어주세요.")
     if "messages" not in st.session_state:
         st.session_state.messages = [
             {
